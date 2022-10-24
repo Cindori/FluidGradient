@@ -69,7 +69,7 @@ public class FluidGradientView: SystemView {
         
         create(blobs, layer: baseLayer)
         create(highlights, layer: highlightLayer)
-        //update(speed: speed, blur: blur)
+        update(speed: speed, blur: blur)
     }
     
     required init?(coder: NSCoder) {
@@ -105,10 +105,11 @@ public class FluidGradientView: SystemView {
     
     /// Update sublayers and set speed and blur levels
     public func update(speed: CGFloat, blur: CGFloat) {
-        guard speed > 0 else { return }
-        self.speed = speed
         self.blur = blur
         updateBlur()
+        
+        guard speed > 0 else { return }
+        self.speed = speed
         
         let layers = (baseLayer.sublayers ?? []) + (highlightLayer.sublayers ?? [])
         for layer in layers {
@@ -141,6 +142,7 @@ public class FluidGradientView: SystemView {
         layer?.contentsScale = scale
         baseLayer.contentsScale = scale
         highlightLayer.contentsScale = scale
+        blurLayer.contentsScale = scale
         
         updateBlur()
     }
@@ -152,8 +154,9 @@ public class FluidGradientView: SystemView {
     public override func layoutSubviews() {
         super.layoutSubviews()
         layer.frame = self.frame
-        //updateBlur()
         layer.layoutSublayers()
+        
+        updateBlur()
     }
     #endif
 }

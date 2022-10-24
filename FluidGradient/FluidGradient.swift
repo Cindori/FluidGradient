@@ -104,7 +104,10 @@ extension FluidGradient {
         
         /// Create blobs and highlights
         func create(blobs: [Color], highlights: [Color]) {
-            guard blobs != self.blobs || highlights != self.blobs else { return }
+            guard blobs != self.blobs || highlights != self.highlights else { return }
+            self.blobs = blobs
+            self.highlights = highlights
+            
             view.create(blobs, layer: view.baseLayer)
             view.create(highlights, layer: view.highlightLayer)
         }

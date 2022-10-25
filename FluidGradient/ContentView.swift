@@ -13,7 +13,7 @@ struct ContentView: View {
     @State var highlights: [Color] = []
     @State var background = Color.black
     
-    @State var blur = 0.0
+    @State var blur = 0.75
     
     var body: some View {
         VStack {
@@ -42,6 +42,7 @@ struct ContentView: View {
     }
     
     var gradient: some View {
+        //Rectangle()
         FluidGradient(blobs: colors,
                       highlights: highlights, speed: 1.2, blur: blur)
         //.background(background)

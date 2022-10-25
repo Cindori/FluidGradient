@@ -21,31 +21,23 @@ public typealias SystemView = UIView
 /// A system view that presents an animated gradient with ``CoreAnimation``
 public class FluidGradientView: SystemView {
     var speed: CGFloat
-    var blur: CGFloat
     
     let baseLayer = ResizableLayer()
     let highlightLayer = ResizableLayer()
-    let blurLayer = ResizableLayer()
     
     var cancellables = Set<AnyCancellable>()
     
+    weak var delegate: FluidGradientDelegate?
+    
     init(blobs: [Color] = [],
          highlights: [Color] = [],
-         speed: CGFloat = 1.0,
-         blur: CGFloat = 0.75) {
+         speed: CGFloat = 1.0) {
         self.speed = speed
-        self.blur = blur
         super.init(frame: .zero)
-        
-        if let filter = CIFilter(name:"CIGaussianBlur") {
-            filter.name = "blur"
-            blurLayer.backgroundFilters = [filter]
-        }
         
         if let compositingFilter = CIFilter(name: "CIOverlayBlendMode") {
             highlightLayer.compositingFilter = compositingFilter
         }
-        //highlightLayer.backgroundFilters = ["overlayBlendMode"]
         
         #if os(OSX)
         layer = ResizableLayer()
@@ -56,31 +48,21 @@ public class FluidGradientView: SystemView {
         layer?.delegate = self
         baseLayer.delegate = self
         highlightLayer.delegate = self
-        blurLayer.delegate = self
         
         self.layer?.addSublayer(baseLayer)
         self.layer?.addSublayer(highlightLayer)
-        self.layer?.addSublayer(blurLayer)
         #else
         self.layer.addSublayer(baseLayer)
         self.layer.addSublayer(highlightLayer)
-        self.layer.addSublayer(blurLayer)
         #endif
         
         create(blobs, layer: baseLayer)
         create(highlights, layer: highlightLayer)
-        update(speed: speed, blur: blur)
+        update(speed: speed)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    func setColor(color: Color, layer: CAGradientLayer) {
-        layer.colors = [SystemColor(color).cgColor,
-                        SystemColor(color).cgColor,
-                        SystemColor(color.opacity(0.0)).cgColor]
-        layer.locations = [0.0, 0.9, 1.0]
     }
     
     /// Create blobs and add to specified layer
@@ -104,10 +86,7 @@ public class FluidGradientView: SystemView {
     }
     
     /// Update sublayers and set speed and blur levels
-    public func update(speed: CGFloat, blur: CGFloat) {
-        self.blur = blur
-        updateBlur()
-        
+    public func update(speed: CGFloat) {
         guard speed > 0 else { return }
         self.speed = speed
         
@@ -130,8 +109,7 @@ public class FluidGradientView: SystemView {
     
     /// Compute and update new blur value
     private func updateBlur() {
-        blurLayer.setValue(pow(min(frame.width, frame.height), blur),
-                           forKeyPath: "backgroundFilters.blur.inputRadius")
+        delegate?.updateBlur(min(frame.width, frame.height))
     }
     
     /// Functional methods
@@ -142,7 +120,6 @@ public class FluidGradientView: SystemView {
         layer?.contentsScale = scale
         baseLayer.contentsScale = scale
         highlightLayer.contentsScale = scale
-        blurLayer.contentsScale = scale
         
         updateBlur()
     }
@@ -152,13 +129,17 @@ public class FluidGradientView: SystemView {
     }
     #else
     public override func layoutSubviews() {
-        super.layoutSubviews()
-        layer.frame = self.frame
-        layer.layoutSublayers()
+        layer.frame = self.bounds
+        baseLayer.frame = self.bounds
+        highlightLayer.frame = self.bounds
         
         updateBlur()
     }
     #endif
+}
+
+protocol FluidGradientDelegate: AnyObject {
+    func updateBlur(_ value: CGFloat)
 }
 
 #if os(OSX)

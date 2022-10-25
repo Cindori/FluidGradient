@@ -13,6 +13,8 @@ public struct FluidGradient: View {
     private var speed: CGFloat
     private var blur: CGFloat
     
+    @State var blurValue: CGFloat = 0.0
+    
     public init(blobs: [Color],
                 highlights: [Color] = [],
                 speed: CGFloat = 1.0,
@@ -27,9 +29,13 @@ public struct FluidGradient: View {
         Representable(blobs: blobs,
                       highlights: highlights,
                       speed: speed,
-                      blur: blur)
+                      blurValue: $blurValue)
+            .blur(radius: pow(blurValue, blur))
             .accessibility(hidden: true)
             .clipped()
+            .onChange(of: blurValue) { value in
+                print(value)
+            }
     }
 }
 
@@ -45,7 +51,8 @@ extension FluidGradient {
         var blobs: [Color]
         var highlights: [Color]
         var speed: CGFloat
-        var blur: CGFloat
+        
+        @Binding var blurValue: CGFloat
         
         func makeView(context: Context) -> FluidGradientView {
             context.coordinator.view
@@ -53,7 +60,6 @@ extension FluidGradient {
         
         func updateView(_ view: FluidGradientView, context: Context) {
             context.coordinator.create(blobs: blobs, highlights: highlights)
-            context.coordinator.update(speed: speed, blur: blur)
         }
         
         #if os(OSX)
@@ -76,30 +82,30 @@ extension FluidGradient {
             Coordinator(blobs: blobs,
                         highlights: highlights,
                         speed: speed,
-                        blur: blur)
+                        blurValue: $blurValue)
         }
     }
 
-    class Coordinator {
+    class Coordinator: FluidGradientDelegate {
         var blobs: [Color]
         var highlights: [Color]
         var speed: CGFloat
-        var blur: CGFloat
+        var blurValue: Binding<CGFloat>
         
         var view: FluidGradientView
         
         init(blobs: [Color],
              highlights: [Color],
              speed: CGFloat,
-             blur: CGFloat) {
+             blurValue: Binding<CGFloat>) {
             self.blobs = blobs
             self.highlights = highlights
             self.speed = speed
-            self.blur = blur
+            self.blurValue = blurValue
             self.view = FluidGradientView(blobs: blobs,
                                           highlights: highlights,
-                                          speed: speed,
-                                          blur: blur)
+                                          speed: speed)
+            self.view.delegate = self
         }
         
         /// Create blobs and highlights
@@ -112,18 +118,15 @@ extension FluidGradient {
             view.create(highlights, layer: view.highlightLayer)
         }
         
-        /// Update speed and blur coefficient
+        /// Update speed
         func update(speed: CGFloat, blur: CGFloat) {
-            guard speed != self.speed || blur != self.blur else { return }
+            guard speed != self.speed else { return }
             self.speed = speed
-            self.blur = blur
-            view.update(speed: speed, blur: blur)
+            view.update(speed: speed)
         }
-    }
-}
-
-struct AuroraPreview: PreviewProvider {
-    static var previews: some View {
-        FluidGradient(blobs: [.red, .blue, .green], highlights: [])
+        
+        func updateBlur(_ value: CGFloat) {
+            blurValue.wrappedValue = value
+        }
     }
 }

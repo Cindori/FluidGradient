@@ -58,7 +58,9 @@ public class FluidGradientView: SystemView {
         
         create(blobs, layer: baseLayer)
         create(highlights, layer: highlightLayer)
-        update(speed: speed)
+        DispatchQueue.main.async {
+            self.update(speed: speed)
+        }
     }
     
     required init?(coder: NSCoder) {

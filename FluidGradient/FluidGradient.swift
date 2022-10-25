@@ -33,9 +33,6 @@ public struct FluidGradient: View {
             .blur(radius: pow(blurValue, blur))
             .accessibility(hidden: true)
             .clipped()
-            .onChange(of: blurValue) { value in
-                print(value)
-            }
     }
 }
 
@@ -60,6 +57,7 @@ extension FluidGradient {
         
         func updateView(_ view: FluidGradientView, context: Context) {
             context.coordinator.create(blobs: blobs, highlights: highlights)
+            context.coordinator.update(speed: speed)
         }
         
         #if os(OSX)
@@ -119,7 +117,7 @@ extension FluidGradient {
         }
         
         /// Update speed
-        func update(speed: CGFloat, blur: CGFloat) {
+        func update(speed: CGFloat) {
             guard speed != self.speed else { return }
             self.speed = speed
             view.update(speed: speed)

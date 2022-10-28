@@ -70,20 +70,20 @@ public class FluidGradientView: SystemView {
     /// Create blobs and add to specified layer
     public func create(_ colors: [Color], layer: CALayer) {
         // Remove blobs at the end if colors are removed
-        let removeCount = layer.sublayers?.count ?? 0 - colors.count
+        let count = layer.sublayers?.count ?? 0
+        let removeCount = count - colors.count
         if removeCount > 0 {
             layer.sublayers?.removeLast(removeCount)
         }
         
         for (index, color) in colors.enumerated() {
-            if index < layer.sublayers?.count ?? 0 {
+            if index < count {
                 if let existing = layer.sublayers?[index] as? BlobLayer {
-                    if existing.colors?.first as! CGColor != SystemColor(color).cgColor {
-                        existing.set(color: color)
-                    }
+                    existing.set(color: color)
                 }
+            } else {
+                layer.addSublayer(BlobLayer(color: color))
             }
-            layer.addSublayer(BlobLayer(color: color))
         }
     }
     

@@ -57,7 +57,9 @@ extension FluidGradient {
         
         func updateView(_ view: FluidGradientView, context: Context) {
             context.coordinator.create(blobs: blobs, highlights: highlights)
-            context.coordinator.update(speed: speed)
+            DispatchQueue.main.async {
+                context.coordinator.update(speed: speed)
+            }
         }
         
         #if os(OSX)

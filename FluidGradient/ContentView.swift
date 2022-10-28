@@ -20,9 +20,12 @@ struct ContentView: View {
             gradient
                 .cornerRadius(16)
                 .padding(16)
+            
+            Button("Update") {
+                setColors()
+            }
         }.onAppear {
-            colors = [.red, .green, .blue]
-            highlights = [.yellow, .orange, .purple]
+            setColors()
         }
         .onTapGesture {
             blur = blur == 0 ? 0.75 : 0.0
@@ -32,10 +35,10 @@ struct ContentView: View {
     func setColors() {
         colors = []
         highlights = []
-        for _ in 0...Int.random(in: 3...8) {
+        for _ in 0...Int.random(in: 5...5) {
             colors.append(colorPool.randomElement()!)
         }
-        for _ in 0...Int.random(in: 3...8) {
+        for _ in 0...Int.random(in: 5...5) {
             highlights.append(colorPool.randomElement()!)
         }
         background = colorPool.randomElement()!
@@ -44,7 +47,7 @@ struct ContentView: View {
     var gradient: some View {
         //Rectangle()
         FluidGradient(blobs: colors,
-                      highlights: highlights, speed: 1.2, blur: blur)
+                      highlights: highlights, speed: 1.2, blur: 0)
         //.background(background)
     }
 }

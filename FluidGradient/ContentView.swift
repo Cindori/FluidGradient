@@ -13,23 +13,12 @@ struct ContentView: View {
     @State var highlights: [Color] = []
     @State var background = Color.black
     
-    @State var blur = 0.75
+    @State var speed = 1.0
     
     var body: some View {
-        VStack {
-            gradient
-                .cornerRadius(16)
-                .padding(16)
-            
-            Button("Update") {
-                setColors()
-            }
-        }.onAppear {
-            setColors()
-        }
-        .onTapGesture {
-            blur = blur == 0 ? 0.75 : 0.0
-        }
+        FluidGradient(blobs: [.red, .green, .blue],
+                      highlights: [.yellow, .orange, .purple])
+        .background(.quaternary)
     }
     
     func setColors() {
@@ -47,7 +36,7 @@ struct ContentView: View {
     var gradient: some View {
         //Rectangle()
         FluidGradient(blobs: colors,
-                      highlights: highlights, speed: 1.2, blur: 0)
+                      highlights: highlights, speed: speed)
         //.background(background)
     }
 }

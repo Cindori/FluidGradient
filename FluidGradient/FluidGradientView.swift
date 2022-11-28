@@ -89,13 +89,16 @@ public class FluidGradientView: SystemView {
     
     /// Update sublayers and set speed and blur levels
     public func update(speed: CGFloat) {
-        guard speed > 0 else { return }
+        cancellables.removeAll()
         self.speed = speed
+        guard speed > 0 else { return }
         
         let layers = (baseLayer.sublayers ?? []) + (highlightLayer.sublayers ?? [])
         for layer in layers {
             if let layer = layer as? BlobLayer {
-                Timer.publish(every: .random(in: 0.8/speed...1.2/speed), on: .main, in: .common)
+                Timer.publish(every: .random(in: 0.8/speed...1.2/speed),
+                              on: .main,
+                              in: .common)
                     .autoconnect()
                     .sink { _ in
                         #if os(OSX)

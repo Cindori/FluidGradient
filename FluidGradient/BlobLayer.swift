@@ -21,16 +21,28 @@ public class BlobLayer: CAGradientLayer {
         set(color: color)
         
         // Center point
-        let position = CGPoint(x: CGFloat.random(in: 0.0...1.0),
-                               y: CGFloat.random(in: 0.0...1.0))
+        let position = newPosition()
         self.startPoint = position
         
         // Radius
-        let size = CGFloat.random(in: 0.2...0.8)
-        let ratio = CGFloat.random(in: 0.5...2.5)
-        let radius = CGPoint(x: size,
-                             y: size*ratio)
+        let radius = newRadius()
         self.endPoint = position.displace(by: radius)
+    }
+    
+    /// Generate a random point on the canvas
+    func newPosition() -> CGPoint {
+        return CGPoint(x: CGFloat.random(in: 0.0...1.0),
+                       y: CGFloat.random(in: 0.0...1.0)).capped()
+    }
+    
+    /// Generate a random radius for the blob
+    func newRadius() -> CGPoint {
+        let size = CGFloat.random(in: 0.15...0.75)
+        let viewRatio = frame.width/frame.height
+        let safeRatio = max(viewRatio.isNaN ? 1 : viewRatio, 1)
+        let ratio = safeRatio*CGFloat.random(in: 0.25...1.75)
+        return CGPoint(x: size,
+                       y: size*ratio)
     }
     
     /// Animate the blob to a random point and size on screen at set speed
@@ -48,14 +60,8 @@ public class BlobLayer: CAGradientLayer {
         animation.isRemovedOnCompletion = false
         animation.fillMode = CAMediaTimingFillMode.forwards
         
-        let position = CGPoint(x: CGFloat.random(in: 0.0...1.0),
-                               y: CGFloat.random(in: 0.0...1.0)).capped()
-        
-        let size = CGFloat.random(in: 0.15...0.75)
-        let viewRatio = frame.width/frame.height
-        let ratio = viewRatio*CGFloat.random(in: 0.25...1.75)
-        let radius = CGPoint(x: size,
-                             y: size*ratio)
+        let position = newPosition()
+        let radius = newRadius()
         
         // Center point
         let start = animation.copy() as! CASpringAnimation
@@ -77,10 +83,10 @@ public class BlobLayer: CAGradientLayer {
         let opacity = animation.copy() as! CASpringAnimation
         opacity.fromValue = self.opacity
         opacity.toValue = value
-        self.add(opacity, forKey: "opacity")
         
         self.opacity = value
         
+        self.add(opacity, forKey: "opacity")
         self.add(start, forKey: "startPoint")
         self.add(end, forKey: "endPoint")
     }

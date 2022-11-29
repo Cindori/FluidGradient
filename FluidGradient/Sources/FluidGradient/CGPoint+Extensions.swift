@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  CGPoint+Extensions.swift
 //  
 //
 //  Created by João Gabriel Pozzobon dos Santos on 03/10/22.

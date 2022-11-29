@@ -1,6 +1,6 @@
 //
-//  NSAuroraView.swift
-//  NSAuroraView
+//  FluidGradientView.swift
+//  FluidGradientView
 //
 //  Created by Oskar Groth on 2021-12-23.
 //

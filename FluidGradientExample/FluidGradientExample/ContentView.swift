@@ -1,11 +1,12 @@
 //
 //  ContentView.swift
-//  Teste
+//  FluidGradientExample
 //
-//  Created by João Gabriel Pozzobon dos Santos on 26/09/22.
+//  Created by João Gabriel Pozzobon dos Santos on 28/11/22.
 //
 
 import SwiftUI
+import FluidGradient
 
 struct ContentView: View {
     let colorPool: [Color] = [.blue, .green, .yellow, .orange, .red, .pink, .purple, .teal, .indigo]
@@ -40,8 +41,6 @@ struct ContentView: View {
         //.background(background)
     }
 }
-
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

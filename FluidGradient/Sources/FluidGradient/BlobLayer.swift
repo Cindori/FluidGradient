@@ -1,6 +1,6 @@
 //
-//  File.swift
-//  
+//  BlobLayer.swift
+//  BlobLayer
 //
 //  Created by João Gabriel Pozzobon dos Santos on 04/10/22.
 //

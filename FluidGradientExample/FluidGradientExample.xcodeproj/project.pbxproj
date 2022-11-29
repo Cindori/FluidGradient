@@ -7,137 +7,117 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		27F3261F28FDB22F0004BA84 /* FluidGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F3261528FDB22F0004BA84 /* FluidGradient.swift */; };
-		27F3262028FDB22F0004BA84 /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F3261628FDB22F0004BA84 /* CGPoint+Extensions.swift */; };
-		27F3262128FDB22F0004BA84 /* BlobLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F3261728FDB22F0004BA84 /* BlobLayer.swift */; };
-		27F3262228FDB22F0004BA84 /* FluidGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F3261828FDB22F0004BA84 /* FluidGradientView.swift */; };
-		27F3262328FDB22F0004BA84 /* FluidGradientApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F3261928FDB22F0004BA84 /* FluidGradientApp.swift */; };
-		27F3262428FDB22F0004BA84 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27F3261B28FDB22F0004BA84 /* Preview Assets.xcassets */; };
-		27F3262528FDB22F0004BA84 /* ResizableLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F3261C28FDB22F0004BA84 /* ResizableLayer.swift */; };
-		27F3262628FDB22F0004BA84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27F3261D28FDB22F0004BA84 /* Assets.xcassets */; };
-		27F3262728FDB22F0004BA84 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F3261E28FDB22F0004BA84 /* ContentView.swift */; };
+		27B2AAC5293595890077B204 /* FluidGradientExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B2AAC4293595890077B204 /* FluidGradientExampleApp.swift */; };
+		27B2AAC7293595890077B204 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B2AAC6293595890077B204 /* ContentView.swift */; };
+		27B2AAC92935958A0077B204 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27B2AAC82935958A0077B204 /* Assets.xcassets */; };
+		27B2AACC2935958A0077B204 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27B2AACB2935958A0077B204 /* Preview Assets.xcassets */; };
+		27B2AAD529359A840077B204 /* FluidGradient in Frameworks */ = {isa = PBXBuildFile; productRef = 27B2AAD429359A840077B204 /* FluidGradient */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		272916B728E21F0C00CB12FE /* FluidGradient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FluidGradient.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		27F3261528FDB22F0004BA84 /* FluidGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FluidGradient.swift; path = FluidGradient/FluidGradient.swift; sourceTree = "<group>"; };
-		27F3261628FDB22F0004BA84 /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CGPoint+Extensions.swift"; path = "FluidGradient/CGPoint+Extensions.swift"; sourceTree = "<group>"; };
-		27F3261728FDB22F0004BA84 /* BlobLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BlobLayer.swift; path = FluidGradient/BlobLayer.swift; sourceTree = "<group>"; };
-		27F3261828FDB22F0004BA84 /* FluidGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FluidGradientView.swift; path = FluidGradient/FluidGradientView.swift; sourceTree = "<group>"; };
-		27F3261928FDB22F0004BA84 /* FluidGradientApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FluidGradientApp.swift; path = FluidGradient/FluidGradientApp.swift; sourceTree = "<group>"; };
-		27F3261B28FDB22F0004BA84 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		27F3261C28FDB22F0004BA84 /* ResizableLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResizableLayer.swift; path = FluidGradient/ResizableLayer.swift; sourceTree = "<group>"; };
-		27F3261D28FDB22F0004BA84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = FluidGradient/Assets.xcassets; sourceTree = "<group>"; };
-		27F3261E28FDB22F0004BA84 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = FluidGradient/ContentView.swift; sourceTree = "<group>"; };
+		27B2AAC1293595890077B204 /* FluidGradientExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FluidGradientExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27B2AAC4293595890077B204 /* FluidGradientExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FluidGradientExampleApp.swift; sourceTree = "<group>"; };
+		27B2AAC6293595890077B204 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		27B2AAC82935958A0077B204 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		27B2AACB2935958A0077B204 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		27B2AAD22935959C0077B204 /* FluidGradient */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = FluidGradient; path = ../FluidGradient; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		272916B428E21F0C00CB12FE /* Frameworks */ = {
+		27B2AABE293595890077B204 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27B2AAD529359A840077B204 /* FluidGradient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		272916AE28E21F0C00CB12FE = {
+		27B2AAB8293595890077B204 = {
 			isa = PBXGroup;
 			children = (
-				272916C828E21F1800CB12FE /* Packages */,
-				27F3261428FDB2090004BA84 /* FluidGradient */,
-				272916B828E21F0C00CB12FE /* Products */,
-				272916CA28E21F1F00CB12FE /* Frameworks */,
+				27B2AAD22935959C0077B204 /* FluidGradient */,
+				27B2AAC3293595890077B204 /* FluidGradientExample */,
+				27B2AAC2293595890077B204 /* Products */,
+				27B2AAD329359A840077B204 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		272916B828E21F0C00CB12FE /* Products */ = {
+		27B2AAC2293595890077B204 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				272916B728E21F0C00CB12FE /* FluidGradient.app */,
+				27B2AAC1293595890077B204 /* FluidGradientExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		272916C828E21F1800CB12FE /* Packages */ = {
+		27B2AAC3293595890077B204 /* FluidGradientExample */ = {
 			isa = PBXGroup;
 			children = (
+				27B2AAC4293595890077B204 /* FluidGradientExampleApp.swift */,
+				27B2AAC6293595890077B204 /* ContentView.swift */,
+				27B2AAC82935958A0077B204 /* Assets.xcassets */,
+				27B2AACA2935958A0077B204 /* Preview Content */,
 			);
-			name = Packages;
+			path = FluidGradientExample;
 			sourceTree = "<group>";
 		};
-		272916CA28E21F1F00CB12FE /* Frameworks */ = {
+		27B2AACA2935958A0077B204 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				27B2AACB2935958A0077B204 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		27B2AAD329359A840077B204 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		27F3261428FDB2090004BA84 /* FluidGradient */ = {
-			isa = PBXGroup;
-			children = (
-				27F3261928FDB22F0004BA84 /* FluidGradientApp.swift */,
-				27F3261E28FDB22F0004BA84 /* ContentView.swift */,
-				27F3261828FDB22F0004BA84 /* FluidGradientView.swift */,
-				27F3261528FDB22F0004BA84 /* FluidGradient.swift */,
-				27F3261728FDB22F0004BA84 /* BlobLayer.swift */,
-				27F3261C28FDB22F0004BA84 /* ResizableLayer.swift */,
-				27F3261628FDB22F0004BA84 /* CGPoint+Extensions.swift */,
-				27F3261A28FDB22F0004BA84 /* Preview Content */,
-				27F3261D28FDB22F0004BA84 /* Assets.xcassets */,
-			);
-			name = FluidGradient;
-			sourceTree = "<group>";
-		};
-		27F3261A28FDB22F0004BA84 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				27F3261B28FDB22F0004BA84 /* Preview Assets.xcassets */,
-			);
-			name = "Preview Content";
-			path = "FluidGradient/Preview Content";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		272916B628E21F0C00CB12FE /* FluidGradient */ = {
+		27B2AAC0293595890077B204 /* FluidGradientExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 272916C528E21F0D00CB12FE /* Build configuration list for PBXNativeTarget "FluidGradient" */;
+			buildConfigurationList = 27B2AACF2935958A0077B204 /* Build configuration list for PBXNativeTarget "FluidGradientExample" */;
 			buildPhases = (
-				272916B328E21F0C00CB12FE /* Sources */,
-				272916B428E21F0C00CB12FE /* Frameworks */,
-				272916B528E21F0C00CB12FE /* Resources */,
+				27B2AABD293595890077B204 /* Sources */,
+				27B2AABE293595890077B204 /* Frameworks */,
+				27B2AABF293595890077B204 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = FluidGradient;
+			name = FluidGradientExample;
 			packageProductDependencies = (
+				27B2AAD429359A840077B204 /* FluidGradient */,
 			);
-			productName = Teste;
-			productReference = 272916B728E21F0C00CB12FE /* FluidGradient.app */;
+			productName = FluidGradientExample;
+			productReference = 27B2AAC1293595890077B204 /* FluidGradientExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		272916AF28E21F0C00CB12FE /* Project object */ = {
+		27B2AAB9293595890077B204 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1400;
-				LastUpgradeCheck = 1400;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
 				TargetAttributes = {
-					272916B628E21F0C00CB12FE = {
-						CreatedOnToolsVersion = 14.0;
-						LastSwiftMigration = 1400;
+					27B2AAC0293595890077B204 = {
+						CreatedOnToolsVersion = 14.1;
 					};
 				};
 			};
-			buildConfigurationList = 272916B228E21F0C00CB12FE /* Build configuration list for PBXProject "FluidGradient" */;
+			buildConfigurationList = 27B2AABC293595890077B204 /* Build configuration list for PBXProject "FluidGradientExample" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -145,47 +125,42 @@
 				en,
 				Base,
 			);
-			mainGroup = 272916AE28E21F0C00CB12FE;
-			productRefGroup = 272916B828E21F0C00CB12FE /* Products */;
+			mainGroup = 27B2AAB8293595890077B204;
+			productRefGroup = 27B2AAC2293595890077B204 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				272916B628E21F0C00CB12FE /* FluidGradient */,
+				27B2AAC0293595890077B204 /* FluidGradientExample */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		272916B528E21F0C00CB12FE /* Resources */ = {
+		27B2AABF293595890077B204 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27F3262628FDB22F0004BA84 /* Assets.xcassets in Resources */,
-				27F3262428FDB22F0004BA84 /* Preview Assets.xcassets in Resources */,
+				27B2AACC2935958A0077B204 /* Preview Assets.xcassets in Resources */,
+				27B2AAC92935958A0077B204 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		272916B328E21F0C00CB12FE /* Sources */ = {
+		27B2AABD293595890077B204 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27F3262028FDB22F0004BA84 /* CGPoint+Extensions.swift in Sources */,
-				27F3261F28FDB22F0004BA84 /* FluidGradient.swift in Sources */,
-				27F3262728FDB22F0004BA84 /* ContentView.swift in Sources */,
-				27F3262128FDB22F0004BA84 /* BlobLayer.swift in Sources */,
-				27F3262328FDB22F0004BA84 /* FluidGradientApp.swift in Sources */,
-				27F3262228FDB22F0004BA84 /* FluidGradientView.swift in Sources */,
-				27F3262528FDB22F0004BA84 /* ResizableLayer.swift in Sources */,
+				27B2AAC7293595890077B204 /* ContentView.swift in Sources */,
+				27B2AAC5293595890077B204 /* FluidGradientExampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		272916C328E21F0D00CB12FE /* Debug */ = {
+		27B2AACD2935958A0077B204 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -235,7 +210,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -245,7 +220,7 @@
 			};
 			name = Debug;
 		};
-		272916C428E21F0D00CB12FE /* Release */ = {
+		27B2AACE2935958A0077B204 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -289,7 +264,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -299,16 +274,15 @@
 			};
 			name = Release;
 		};
-		272916C628E21F0D00CB12FE /* Debug */ = {
+		27B2AAD02935958A0077B204 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"FluidGradient/Preview Content\"";
-				DEVELOPMENT_TEAM = V9F4J6KX54;
+				DEVELOPMENT_ASSET_PATHS = "\"FluidGradientExample/Preview Content\"";
+				DEVELOPMENT_TEAM = ZQK6SX26CE;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -321,28 +295,26 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.joogps.fluid;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cindori.FluidGradientExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		272916C728E21F0D00CB12FE /* Release */ = {
+		27B2AAD12935958A0077B204 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"FluidGradient/Preview Content\"";
-				DEVELOPMENT_TEAM = V9F4J6KX54;
+				DEVELOPMENT_ASSET_PATHS = "\"FluidGradientExample/Preview Content\"";
+				DEVELOPMENT_TEAM = ZQK6SX26CE;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -355,7 +327,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.joogps.fluid;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cindori.FluidGradientExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
@@ -369,25 +341,32 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		272916B228E21F0C00CB12FE /* Build configuration list for PBXProject "FluidGradient" */ = {
+		27B2AABC293595890077B204 /* Build configuration list for PBXProject "FluidGradientExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				272916C328E21F0D00CB12FE /* Debug */,
-				272916C428E21F0D00CB12FE /* Release */,
+				27B2AACD2935958A0077B204 /* Debug */,
+				27B2AACE2935958A0077B204 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		272916C528E21F0D00CB12FE /* Build configuration list for PBXNativeTarget "FluidGradient" */ = {
+		27B2AACF2935958A0077B204 /* Build configuration list for PBXNativeTarget "FluidGradientExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				272916C628E21F0D00CB12FE /* Debug */,
-				272916C728E21F0D00CB12FE /* Release */,
+				27B2AAD02935958A0077B204 /* Debug */,
+				27B2AAD12935958A0077B204 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		27B2AAD429359A840077B204 /* FluidGradient */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FluidGradient;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 272916AF28E21F0C00CB12FE /* Project object */;
+	rootObject = 27B2AAB9293595890077B204 /* Project object */;
 }

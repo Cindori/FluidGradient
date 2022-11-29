@@ -1,6 +1,6 @@
 //
-//  ResizableLayer.swift.swift
-//  
+//  ResizableLayer.swift
+//  ResizableLayer
 //
 //  Created by João Gabriel Pozzobon dos Santos on 03/10/22.
 //

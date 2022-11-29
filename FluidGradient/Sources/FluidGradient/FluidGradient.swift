@@ -30,9 +30,9 @@ public struct FluidGradient: View {
                       highlights: highlights,
                       speed: speed,
                       blurValue: $blurValue)
-            .blur(radius: pow(blurValue, blur))
-            .accessibility(hidden: true)
-            .clipped()
+        .blur(radius: pow(blurValue, blur))
+        .accessibility(hidden: true)
+        .clipped()
     }
 }
 
@@ -62,21 +62,21 @@ extension FluidGradient {
             }
         }
         
-        #if os(OSX)
+#if os(OSX)
         func makeNSView(context: Context) -> FluidGradientView {
             makeView(context: context)
         }
         func updateNSView(_ view: FluidGradientView, context: Context) {
             updateView(view, context: context)
         }
-        #else
+#else
         func makeUIView(context: Context) -> FluidGradientView {
             makeView(context: context)
         }
         func updateUIView(_ view: FluidGradientView, context: Context) {
             updateView(view, context: context)
         }
-        #endif
+#endif
         
         func makeCoordinator() -> Coordinator {
             Coordinator(blobs: blobs,
@@ -85,7 +85,7 @@ extension FluidGradient {
                         blurValue: $blurValue)
         }
     }
-
+    
     class Coordinator: FluidGradientDelegate {
         var blobs: [Color]
         var highlights: [Color]

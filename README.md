@@ -4,7 +4,7 @@
 
 <p>
     <a href="https://developer.apple.com/documentation/swiftui/"> <img src="https://img.shields.io/badge/-SwiftUI-red.svg" /> </a>
-    <a href="https://developer.apple.com/documentation/quartzcore"> <img src="https://img.shields.io/badge/-CoreAnimation-grey.svg" /> </a>
+    <a href="https://developer.apple.com/documentation/quartzcore"> <img src="https://img.shields.io/badge/-CoreAnimation-blue.svg" /> </a>
       <a href="https://opensource.org/licenses/MIT"> <img src="https://img.shields.io/badge/License-MIT-yellow.svg" /> </a>
 </p>
 

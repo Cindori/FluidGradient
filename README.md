@@ -38,8 +38,6 @@ struct ContentView: View {
 }
 ```
 
----
-
 ## Contributors
 - [Oskar Groth (@oskargroth)](https://github.com/oskargroth) – Founder, developer and writer
 - [João Gabriel (@joogps)](https://github.com/joogps) – Team member, developer and writer

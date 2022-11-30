@@ -3,8 +3,9 @@
 </h1>
 
 <p>
-    <img src="https://img.shields.io/badge/-SwiftUI-red.svg" />
-    <img src="https://img.shields.io/badge/-CoreAnimation-grey.svg" />
+    <a href="https://developer.apple.com/documentation/swiftui/"> <img src="https://img.shields.io/badge/-SwiftUI-red.svg" /> </a>
+    <a href="https://developer.apple.com/documentation/quartzcore"> <img src="https://img.shields.io/badge/-CoreAnimation-grey.svg" /> </a>
+      <a href="https://opensource.org/licenses/MIT"> <img src="https://img.shields.io/badge/License-MIT-yellow.svg" /> </a>
 </p>
 
 A fluid, animated gradient implemented with CoreAnimation and SwiftUI, made available as a [Swift Package](https://developer.apple.com/documentation/xcode/adding-package-dependencies-to-your-app).
@@ -22,7 +23,7 @@ This implementation works by displaying stacked "blobs" in a coordinate space, a
 
 You can find an example buildable project that uses FluidGradient in the root of this repository. To use it in your app, you can start with the following:
 
-```
+```swift
 import SwiftUI
 import FluidGradient
 
@@ -39,5 +40,10 @@ struct ContentView: View {
 
 ---
 
+## Contributors
+- [Oskar Groth (@oskargroth)](https://github.com/oskargroth) – Founder, developer and writer
+- [João Gabriel (@joogps)](https://github.com/joogps) – Team member, developer and writer
 
+## Licensing
+This projectis made available through the MIT License. 
 

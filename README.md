@@ -47,6 +47,9 @@ struct ContentView: View {
 ```
 
 ## About Cindori
+
+[![Cindori](/assets/cindori.jpg)](https://cindori.com)
+
 We're a small team of developers dedicated to crafting amazing experiences for Apple platforms.
 
 Check out our apps and developer blog at [cindori.com](https://cindori.com).

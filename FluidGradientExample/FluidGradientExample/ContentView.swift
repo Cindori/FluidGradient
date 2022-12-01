@@ -21,7 +21,10 @@ struct ContentView: View {
                       highlights: [.yellow, .orange, .purple],
                       speed: 1.0,
                       blur: 0.75)
+        .cornerRadius(16)
+        .padding(16)
         .background(.quaternary)
+        .navigationTitle("FluidGradient")
     }
     
     func setColors() {

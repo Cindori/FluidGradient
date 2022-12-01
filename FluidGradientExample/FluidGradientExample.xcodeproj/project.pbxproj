@@ -7,20 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2776120429378B6F009ABDD2 /* FluidGradient in Frameworks */ = {isa = PBXBuildFile; productRef = 2776120329378B6F009ABDD2 /* FluidGradient */; };
 		27B2AAC5293595890077B204 /* FluidGradientExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B2AAC4293595890077B204 /* FluidGradientExampleApp.swift */; };
 		27B2AAC7293595890077B204 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B2AAC6293595890077B204 /* ContentView.swift */; };
 		27B2AAC92935958A0077B204 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27B2AAC82935958A0077B204 /* Assets.xcassets */; };
 		27B2AACC2935958A0077B204 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27B2AACB2935958A0077B204 /* Preview Assets.xcassets */; };
-		27B2AAD529359A840077B204 /* FluidGradient in Frameworks */ = {isa = PBXBuildFile; productRef = 27B2AAD429359A840077B204 /* FluidGradient */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2776120229378B55009ABDD2 /* FluidGradient */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = FluidGradient; path = ..; sourceTree = "<group>"; };
 		27B2AAC1293595890077B204 /* FluidGradientExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FluidGradientExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B2AAC4293595890077B204 /* FluidGradientExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FluidGradientExampleApp.swift; sourceTree = "<group>"; };
 		27B2AAC6293595890077B204 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		27B2AAC82935958A0077B204 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27B2AACB2935958A0077B204 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		27B2AAD22935959C0077B204 /* FluidGradient */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = FluidGradient; path = ../FluidGradient; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,17 +28,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27B2AAD529359A840077B204 /* FluidGradient in Frameworks */,
+				2776120429378B6F009ABDD2 /* FluidGradient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2776120029378B06009ABDD2 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				2776120229378B55009ABDD2 /* FluidGradient */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 		27B2AAB8293595890077B204 = {
 			isa = PBXGroup;
 			children = (
-				27B2AAD22935959C0077B204 /* FluidGradient */,
+				2776120029378B06009ABDD2 /* Packages */,
 				27B2AAC3293595890077B204 /* FluidGradientExample */,
 				27B2AAC2293595890077B204 /* Products */,
 				27B2AAD329359A840077B204 /* Frameworks */,
@@ -96,7 +104,7 @@
 			);
 			name = FluidGradientExample;
 			packageProductDependencies = (
-				27B2AAD429359A840077B204 /* FluidGradient */,
+				2776120329378B6F009ABDD2 /* FluidGradient */,
 			);
 			productName = FluidGradientExample;
 			productReference = 27B2AAC1293595890077B204 /* FluidGradientExample.app */;
@@ -362,7 +370,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		27B2AAD429359A840077B204 /* FluidGradient */ = {
+		2776120329378B6F009ABDD2 /* FluidGradient */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = FluidGradient;
 		};

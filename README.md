@@ -43,5 +43,5 @@ struct ContentView: View {
 - [João Gabriel (@joogps)](https://github.com/joogps) – Team member, developer and writer
 
 ## Licensing
-This projectis made available through the MIT License. 
+This project is made available through the [MIT License](https://opensource.org/licenses/MIT). 
 

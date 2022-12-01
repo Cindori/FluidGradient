@@ -14,6 +14,14 @@ A fluid, animated gradient implemented with CoreAnimation and SwiftUI, made avai
 
 This implementation works by displaying stacked "blobs" in a coordinate space, and blurring them afterwards to make it seem seamless. The blobs are simple `CAGradientLayer` layers added to two separate `CALayer` layers: base and highlight. The latter one has an overlay blend mode to create unique patterns. You can optionally provide colors for both the base and highlight layers.
 
+### Why CALayer?
+
+While it's easy to create the blob shapes in SwiftUI, animation in SwiftUI is still performed on the CPU. This means that your app will probably consume double-digit CPU percentages and be noted as a "high" energy consumer in Activity Monitor.
+
+We use CALayer instead because it offloads all the work to the WindowServer, making your app have a zero performance impact despite running the gradient animation at full screen refresh rate.
+
+[Performance of Fluid Gradient](/assets/performance.jpg)
+
 > **Note**
 > You can learn to code this project by yourself in a series of development tutorial articles written for the [Cindori Blog](https://cindori.com/developer/animated-gradient).
 > - [Building a fluid gradient with CoreAnimation & SwiftUI: Part 1](https://cindori.com/developer/animated-gradient)

@@ -20,7 +20,7 @@ While it's easy to create the blob shapes in SwiftUI, animation in SwiftUI is st
 
 We use CALayer instead because it offloads all the work to the WindowServer, making your app have a zero performance impact despite running the gradient animation at full screen refresh rate.
 
-[Performance of Fluid Gradient](/assets/performance.jpg)
+![Performance of Fluid Gradient](/assets/performance.jpg)
 
 > **Note**
 > You can learn to code this project by yourself in a series of development tutorial articles written for the [Cindori Blog](https://cindori.com/developer/animated-gradient).

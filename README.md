@@ -46,6 +46,9 @@ struct ContentView: View {
 }
 ```
 
+## About Cindori
+We're a small team of developers dedicated to crafting amazing experiences for Apple platforms. Learn more at [cindori.com](https://cindori.com).
+
 ## Contributors
 - [Oskar Groth (@oskargroth)](https://github.com/oskargroth) – Founder, developer and writer
 - [João Gabriel (@joogps)](https://github.com/joogps) – Team member, developer and writer

@@ -116,6 +116,7 @@ extension FluidGradient {
             
             view.create(blobs, layer: view.baseLayer)
             view.create(highlights, layer: view.highlightLayer)
+            view.update(speed: speed)
         }
         
         /// Update speed

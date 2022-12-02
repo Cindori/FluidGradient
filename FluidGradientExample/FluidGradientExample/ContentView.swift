@@ -9,22 +9,29 @@ import SwiftUI
 import FluidGradient
 
 struct ContentView: View {
-    let colorPool: [Color] = [.blue, .green, .yellow, .orange, .red, .pink, .purple, .teal, .indigo]
     @State var colors: [Color] = []
     @State var highlights: [Color] = []
     @State var background = Color.black
     
     @State var speed = 1.0
     
+    let colorPool: [Color] = [.blue, .green, .yellow, .orange, .red, .pink, .purple, .teal, .indigo]
+    
     var body: some View {
-        FluidGradient(blobs: [.red, .green, .blue],
-                      highlights: [.yellow, .orange, .purple],
-                      speed: 1.0,
-                      blur: 0.75)
-        .cornerRadius(16)
+        VStack {
+            gradient
+                .cornerRadius(16)
+                .padding(4)
+            
+            HStack {
+                Button("Randomize colors", action: setColors)
+                Slider(value: $speed, in: 0...5)
+            }.padding(4)
+        }
         .padding(16)
         .background(.quaternary)
         .navigationTitle("FluidGradient")
+        .onAppear(perform: setColors)
     }
     
     func setColors() {
@@ -40,10 +47,9 @@ struct ContentView: View {
     }
     
     var gradient: some View {
-        //Rectangle()
         FluidGradient(blobs: colors,
-                      highlights: highlights, speed: speed)
-        //.background(background)
+                      highlights: highlights,
+                      speed: speed)
     }
 }
 

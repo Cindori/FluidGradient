@@ -10,6 +10,8 @@
 
 A fluid, animated gradient implemented with CoreAnimation and SwiftUI, made available as a [Swift Package](https://developer.apple.com/documentation/xcode/adding-package-dependencies-to-your-app).
 
+![Fluid Gradient](/assets/video.mov)
+
 ## How it works
 
 This implementation works by displaying stacked "blobs" in a coordinate space, and blurring them afterwards to make it seem seamless. The blobs are simple `CAGradientLayer` layers added to two separate `CALayer` layers: base and highlight. The latter one has an overlay blend mode to create unique patterns. You can optionally provide colors for both the base and highlight layers.

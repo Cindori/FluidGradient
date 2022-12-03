@@ -11,7 +11,6 @@ import FluidGradient
 struct ContentView: View {
     @State var colors: [Color] = []
     @State var highlights: [Color] = []
-    @State var background = Color.black
     
     @State var speed = 1.0
     
@@ -29,7 +28,6 @@ struct ContentView: View {
             }.padding(4)
         }
         .padding(16)
-        .background(.quaternary)
         .navigationTitle("FluidGradient")
         .onAppear(perform: setColors)
     }

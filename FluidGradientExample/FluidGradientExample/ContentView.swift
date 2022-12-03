@@ -19,6 +19,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             gradient
+                .backgroundStyle(.quaternary)
                 .cornerRadius(16)
                 .padding(4)
             

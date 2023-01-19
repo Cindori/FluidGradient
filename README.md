@@ -4,10 +4,10 @@
 
 <p>
     <img src="https://img.shields.io/badge/macOS-11.0+-orange.svg" />
-    <img src="https://img.shields.io/badge/iOS-14.0+-blue.svg" />
+    <img src="https://img.shields.io/badge/iOS-14.0+-teal.svg" />
     <a href="https://developer.apple.com/documentation/swiftui/"> <img src="https://img.shields.io/badge/-SwiftUI-red.svg" /> </a>
     <a href="https://developer.apple.com/documentation/quartzcore"> <img src="https://img.shields.io/badge/-CoreAnimation-blue.svg" /> </a>
-      <a href="https://opensource.org/licenses/MIT"> <img src="https://img.shields.io/badge/License-MIT-yellow.svg" /> </a>
+      <a href="https://opensource.org/licenses/MIT"> <img src="https://img.shields.io/badge/License-MIT-lightgray.svg" /> </a></a>
 </p>
 
 A fluid, animated gradient implemented with CoreAnimation and SwiftUI, made available as a [Swift Package](https://developer.apple.com/documentation/xcode/adding-package-dependencies-to-your-app).

@@ -3,6 +3,8 @@
 </h1>
 
 <p>
+    <img src="https://img.shields.io/badge/macOS-11.0+-orange.svg" />
+    <img src="https://img.shields.io/badge/iOS-14.0+-blue.svg" />
     <a href="https://developer.apple.com/documentation/swiftui/"> <img src="https://img.shields.io/badge/-SwiftUI-red.svg" /> </a>
     <a href="https://developer.apple.com/documentation/quartzcore"> <img src="https://img.shields.io/badge/-CoreAnimation-blue.svg" /> </a>
       <a href="https://opensource.org/licenses/MIT"> <img src="https://img.shields.io/badge/License-MIT-yellow.svg" /> </a>
@@ -31,7 +33,7 @@ We use CALayer instead because it offloads all the work to the WindowServer, mak
 
 ## Example usage
 
-You can find an example buildable project that uses FluidGradient in the root of this repository. To use it in your app, you can start with the following:
+You can find an example buildable project that uses FluidGradient in the root of this repository (requires Xcode 14 and macOS Ventura). To use it in your app, you can start with the following:
 
 ```swift
 import SwiftUI

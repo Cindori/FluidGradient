@@ -6,8 +6,8 @@ import PackageDescription
 let package = Package(
     name: "FluidGradient",
     platforms: [
-        .macOS(.v13),
-        .iOS(.v16)
+        .macOS(.v11),
+        .iOS(.v14)
     ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.

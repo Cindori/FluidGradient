@@ -42,7 +42,6 @@ struct ContentView: View {
         for _ in 0...Int.random(in: 5...5) {
             highlights.append(colorPool.randomElement()!)
         }
-        background = colorPool.randomElement()!
     }
     
     var gradient: some View {

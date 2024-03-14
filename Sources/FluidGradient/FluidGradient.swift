@@ -32,7 +32,6 @@ public struct FluidGradient: View {
                       blurValue: $blurValue)
         .blur(radius: pow(blurValue, blur))
         .accessibility(hidden: true)
-        .clipped()
     }
 }
 
